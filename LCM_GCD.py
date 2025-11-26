@@ -12,4 +12,4 @@ def gcd_lcm(a,b):
     print("Greast common divider: ", g)
     print("least common multible: ", (a*b)//g)
     
-gcd_lcm(5,15)
+gcd_lcm(24,234)

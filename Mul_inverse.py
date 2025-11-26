@@ -20,4 +20,4 @@ def mul_inverse(b,n):
     if r1 != 1: return False
     return (t1%n)
 
-print(mul_inverse(89,232))
+print(mul_inverse(9,10))
