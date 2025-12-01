@@ -20,8 +20,8 @@ def extended_euclidean(a,b):
         (r1,r2) = (r2,r1%r2)
         (s1,s2) = (s2,s1-q*s2)
         (t1,t2) = (t2,t1-q*t2)
-    print("Bézout coefficients:", s1, t1)
+    print("Bezout coefficients:", s1, t1)
     print("greatest common divisor:", r1)
-    print("quotients by the gcd:", t2, s2)
+    print("quotients:", t2, s2)
     
 extended_euclidean(1000,625)

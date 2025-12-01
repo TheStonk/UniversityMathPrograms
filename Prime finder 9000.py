@@ -29,39 +29,4 @@ def isprime(n:int, k):
             if rectest(x, r, n): return False
     return True
 
-def sieve(limit):
-    arrs = [i for i in range(2,limit)]
-    li = math.sqrt(limit)+1
-    i = 0
-    while arrs[i]<=li:
-        for j in arrs[i+1:]:
-            if j%arrs[i] == 0:
-                arrs.remove(j)
-        i+=1
-    print("prime list generated")
-    return arrs
-
-"""pri = sieve(100000)
-leng = len(pri)
-print(leng)
-ind = 50
-while ind < leng:
-    #x = random.randint(2**3317, 2**3318)
-    x = 2**pri[ind]- 1
-    if isprime(x,10):
-        print("prime found: ", pri[ind])
-        file.writelines(str(pri[ind]) + "\n")
-    ind+=1
-file.close()
-"""
-#x = random.randint(2**30000, 2**30001)
-#x = random.randint(12, 1000000)
-#while not(isprime(x,10)):
-#    print("go")
-#    x = random.randint(2 ** 30000, 2 ** 30001)
-#    #x = random.randint(12,1000000)
-#print("prime found: ", x)
-#file.writelines(str(x))
-#file.close()
-
 print(isprime(98764321261,10))
