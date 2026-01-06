@@ -4,7 +4,7 @@ def mul_inverse(b,n):
     t2 = 1
     s1 = 1
     s2 = 0
-    #print("\\displaylines{")
+    print("\\displaylines{")
     while r2 != 0:
         q = r1//r2
         (r1,r2) = (r2,r1%r2)
@@ -13,11 +13,11 @@ def mul_inverse(b,n):
         ttemp = t1 # FOR PRINT
         (t1,t2) = (t2,t1-q*t2)
         # PRINT STEPS
-        #print(stemp,"-",s1,"\\cdot",q,"=",s2,",\:",stemp,"-",t1,"\\cdot",q,"=",t2," \\\ ")
+        print(stemp,"-",s1,"\\cdot",q,"=",s2,",\:",stemp,"-",t1,"\\cdot",q,"=",t2," \\\ ")
         
-    #print("t_{1} \\bmod n = \\bar{a}\\to",t1,"\\bmod",n,"=",t1%n)
-    #print("}")
+    print("t_{1} \\bmod n = \\bar{a}\\to",t1,"\\bmod",n,"=",t1%n)
+    print("}")
     if r1 != 1: return False
     return (t1%n)
 
-print(mul_inverse(17,1440))
+print(mul_inverse(21,12))

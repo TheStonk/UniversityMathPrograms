@@ -16,4 +16,4 @@ def find(cil):
     if reduce(lambda acc, ci: acc and ci.solve(x), cil, True):
       return x
         
-print(find([System_solver(1,1,20),System_solver(1,2,44)]))
+print(find([System_solver(1,1,20),System_solver(1,2,44)]))  
