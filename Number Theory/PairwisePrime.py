@@ -16,5 +16,5 @@ def check(nums):
                 return False
     return True
             
-print(check([8,9, 35]))
+print(check([8,9,35]))
         

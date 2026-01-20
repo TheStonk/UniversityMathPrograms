@@ -10,7 +10,7 @@ def gcd(a,b):
 
 print("Greatest common divider is ",gcd(1000,625))
 """
-
+{}
 def extended_euclidean(a,b):
     (r1,r2) = (a,b)
     (t1,t2) = (0,1)
@@ -22,6 +22,5 @@ def extended_euclidean(a,b):
         (t1,t2) = (t2,t1-q*t2)
     print("Bezout coefficients:", s1, t1)
     print("greatest common divisor:", r1)
-    print("quotients:", t2, s2)
     
 extended_euclidean(1000,625)

@@ -16,4 +16,15 @@ def find(cil):
     if reduce(lambda acc, ci: acc and ci.solve(x), cil, True):
       return x
         
-print(find([System_solver(1,1,20),System_solver(1,2,44)]))  
+print(find([System_solver(1,4,20),System_solver(1,4,23),System_solver(1,4,2)]))
+
+count = 0
+for i in range(17):
+  for j in range(23):
+    for l in range(3):
+      print(i,j,l)
+      if find([System_solver(1,i,17),System_solver(1,j,23),System_solver(1,l,2)]):
+        count+=1
+
+print(count)
+

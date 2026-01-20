@@ -1,22 +1,15 @@
 from math import factorial
 
-def perm(n,r):
+def permutaion(n,r):
     if 0<= r and r <= n:
         return factorial(n)//factorial(n-r)
     return False
 
-def comp(n,r):
+def combination(n,r):
     if 0<= r and r <= n:
         return factorial(n)//(factorial(r)*factorial(n-r))
 
-print(perm(100,3))
-print(comp(52,5))
-
-def other(n,r):
-    result = n
-    for i in range(1,r):
-        print(n-i)
-        result *= n-i
-    return result
-
-print(other(100,3))
+print(combination(100,92))
+print(permutaion(100,8))
+print(combination(92,3)==permutaion(30,3)/6)
+#print(factorial(17)//(factorial(7)*factorial(4)))

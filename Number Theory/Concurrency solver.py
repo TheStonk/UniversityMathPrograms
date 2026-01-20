@@ -28,4 +28,4 @@ def hand(a,b,m):
 #Hvis du skal solve en opgave hvor du bliver givet, p, q og e
 #Kan den løses ved at sige ex == 1 mod (p-1)(q-1)
 # så i det her tilfælde er e = 17, ig (p-1)(q-1) = 1440
-hand(17,1,1440)
+hand(19,4,141)
