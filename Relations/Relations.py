@@ -49,11 +49,11 @@ def reflexive_closure(R:set)->set:
         if (a,a) not in R:
             R.update((a,a))
     return R
-def symmetric_closure(R:set)->set:
+def symmetric_closure(R:list)->set:
     for (a,b) in R:
         if (b,a) not in R:
-            R.update((b,a))
-    return R
+            R.append((b,a))
+    return set(R)
 def tClose(R:set)->set:
     R1 = {t for t in R}
     for (a,b) in R:
@@ -71,6 +71,13 @@ def isPartial(Rel)->bool:
 def evaluate_relation(label,Rel:set)->None:
     print(f'{chr(label+97)} ==> {isReflexive(Rel):^{w}}{isSymmetric(Rel):^{w}}{isAntiSymmetric(Rel):^{w}}{isTransitive(Rel):^{w}}{isEqual(Rel):^{w}}{isPartial(Rel):^{w}}')
 
+def compo(R1:set,R2:set):
+    result = set()
+    for (a,b) in R1:
+        for (x,c) in R2:
+            if b == x:
+                result.add((a,c))
+    return result
 
 def from_file():
     relations = ""
@@ -85,5 +92,8 @@ def from_file():
 
 
 #from_file()
-print(tClose({(0,1),(1,1),(1,2)}))
+#print(tClose({(0,1),(1,1),(1,2)}))
 #print(create_relation({1,2,3,4,5,6,7,8,9},{1,2,3,4,6,7,8,9},lambda a,b: a<b))
+#print(symmetric_closure([(1,1),(1,2),(1,3),(2,2),(2,3),(3,2),(3,3)]))
+inp = {(1,1),(1,2),(2,2),(2,3),(3,3),(3,4),(4,4)}
+print(compo(inp,inp))

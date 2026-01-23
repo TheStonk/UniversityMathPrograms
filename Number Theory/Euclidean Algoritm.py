@@ -23,4 +23,4 @@ def extended_euclidean(a,b):
     print("Bezout coefficients:", s1, t1)
     print("greatest common divisor:", r1)
     
-extended_euclidean(1000,625)
+extended_euclidean(16,24)

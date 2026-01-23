@@ -1,9 +1,12 @@
 import numpy as np
 
-a = np.array([[0,1,0],
-              [0,1,0]])
-b = np.array([[1,1],
-              [0,1]])
-#print(a@b) # multiply two matrix, use @ for matrix mul
-print(a.transpose()) # Transpose matrix
-
+a = np.array([[1,2],
+              [3,4],
+              [5,6]])
+b = np.array([[1,2,3],
+              [1,2,3]])
+c = a@b
+d = b@a
+print(c@d) # multiply two matrix, use @ for matrix mul
+#print(b.transpose()) # Transpose matrix
+#print(a+a)

@@ -9,7 +9,7 @@ def combination(n,r):
     if 0<= r and r <= n:
         return factorial(n)//(factorial(r)*factorial(n-r))
 
-print(combination(100,92))
-print(permutaion(100,8))
-print(combination(92,3)==permutaion(30,3)/6)
-#print(factorial(17)//(factorial(7)*factorial(4)))
+
+print(combination(9,7))
+
+print(([(x,y,z) for x in range(1,10) for y in range(1,10) for z in range(1,10) if x+y+z==7]))
